@@ -136,7 +136,7 @@ nav {
 .dark-theme section,
 .dark-theme .footer__container,
 .dark-theme nav,
-.dark-theme html {
+.dark-theme body {
   background-color: #242424 !important;
 }
 
@@ -151,7 +151,7 @@ nav {
   background-color: transparent;
   border: none;
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
   color: #0b2545;
   display: none;
 }
