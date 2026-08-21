@@ -7,6 +7,12 @@
   font-family: 'Inter', sans-serif;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 h1,
 h2 {
   color: #0b2545;
@@ -30,6 +36,12 @@ section {
 
 
 /* LANDING  */
+
+#landing {
+  flex: 1;
+}
+
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -122,6 +134,63 @@ nav {
   background-color: #242424 !important;
 }
 
+.btn__menu {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  font-size: 40px;
+  color: #0b2545;
+  display: none;
+}
+
+.menu__backdrop {
+  position: absolute;
+  background-color: #0b2545;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.menu--open .menu__backdrop {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu--open {
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu__list {
+  padding: 32px 0;
+}
+
+.menu__link {
+  font-size: 40px;
+  color: #f28c28
+}
+
+.btn__menu--close {
+  position: absolute;
+  color: #f28c28;
+  right: 0px;
+  top: 25px;
+}
+
 
 /* LANDING  */
 
@@ -183,7 +252,7 @@ nav {
   }
   100% {
     opacity: 1;
-    translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -267,5 +336,68 @@ nav {
   margin-bottom: 10px;
 }
 
+/* small phones, large phones, tablets */
 
+@media (max-width: 768px) {
+  nav {
+  margin: 0;
+  padding: 0;
+  justify-content: space-between
+  }
+  .nav__logo {
+    margin: 16px;
+  }
+  .nav__links {
+    margin-right: 50px;
+  }
+  .header__container {
+    padding: 0;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .header__description--title {
+    max-width: 615px;
+  }
+  .undraw {
+    width: 100%;
+    height: 100%;
+  }
+  .btn__menu {
+    display: none;
+  }
+}
 
+/* small phones, large phones */
+
+@media (max-width: 480px) {
+  .nav__links {
+    display: none;
+  }
+  .btn__menu {
+    display: block;
+  }
+  .footer__row {
+    justify-content: center;
+  }
+  .footer__logo {
+    width: 100px;
+    height: 100px;
+  }
+  .footer__links {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__link {
+    font-size: 16px;
+  }
+  .footer__copyright {
+    font-size: 14px;
+    margin-top: 16px;
+  }
+  input::placeholder {
+    font-size: 12px;
+  }
+  .undraw {
+    animation: fade-up 600ms 900ms backwards;
+  }
+}

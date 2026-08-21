@@ -51,7 +51,28 @@
             </a>
           </li>
         </ul>
+        <button class="btn__menu" onclick="openMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="menu__backdrop">
+          <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+            <i class="fa-solid fa-times"></i>
+          </button>
+          <ul class="menu__links">
+            <li class="menu__list">
+              <a href="#" class="menu__link link__hover-effect" onclick="closeMenu()">Home</a>
+            </li>
+            <li class="menu__list">
+              <a href="#" class="menu__link link__hover-effect" onclick="closeMenu()">Catalog</a>
+            </li>
+            <li class="menu__list">
+              <a href="#" class="menu__link link__hover-effect" onclick="closeMenu()">Contact</a>
+            </li>
+          </ul>
+        </div>
       </nav>
+
+
       <header>
         <div class="header__container">
           <div class="header__description">
@@ -66,7 +87,7 @@
             <div class="search__bar">
               <input
                 type="text"
-                placeholder="Search by Keyword, Genre, Cast"
+                placeholder="Search by Title, Genre or Actor"
                 style="padding: 10px; font-size: 16px; line-height: 1.5"
                 class="header__search"
               />
@@ -99,8 +120,6 @@
               Copyright &copy 2026 Jeanice Medal
             </div>
           </div>
-        </div>
-      </div>
     </footer>
   </body>
 </html>

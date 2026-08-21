@@ -1,19 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catalog</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="index.js"></script>
-  <script
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catalog</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.js"></script>
+    <script
       src="https://kit.fontawesome.com/2015aca0a7.js"
       crossorigin="anonymous"
     ></script>
-</head>
-<body>
-  <section>
-    <nav>
+  </head>
+  <body>
+    <section>
+      <nav>
         <figure class="nav__logo">
           <i class="fa-solid fa-video"></i>
           <p class="nav__logo--name">CineScope</p>
@@ -44,14 +44,58 @@
           <li class="nav__link">
             <a
               href=""
-              class="nav__link--anchor link__hover-effect link__hover-effect-black" onclick="(toggleContrast(event))"
-              ><i
-                class="fa-solid fa-circle-half-stroke"
-              ></i>
+              class="nav__link--anchor link__hover-effect link__hover-effect-black"
+              onclick="toggleContrast(event)"
+              ><i class="fa-solid fa-circle-half-stroke"></i>
             </a>
           </li>
         </ul>
       </nav>
-  </section>
-</body>
+    </section>
+
+    <main>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="movies__header">Browse our catalog!</div>
+            <input
+              type="text"
+              placeholder="Search by Title, Genre or Actor"
+              class="movie__search"
+            />
+            <select id="filter">
+              <option value="" disabled selected>Sort</option>
+              <option value="NEWEST"></option>
+              <option value="OLDEST"></option>
+              <option value="RATING"></option>
+            </select>
+          </div>
+          <div class="movies">
+            <i class="fa-solid fa-spinner"></i>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer__container">
+        <div class="footer__row">
+          <figure>
+            <i class="fa-solid fa-video footer__logo"></i>
+          </figure>
+          <div class="footer__links">
+            <a href="#" class="footer__link link__hover-effect link__hover-effect--white">About Us</a>
+            <a href="#" class="footer__link link__hover-effect link__hover-effect--white">FAQ</a>
+            <a href="#" class="footer__link link__hover-effect link__hover-effect--white">Contact Support</a>
+            <a href="#" class="footer__link link__hover-effect link__hover-effect--white">Terms of Use</a>
+            </div>
+        </div>
+            <div class="footer__copyright">
+              Copyright &copy 2026 Jeanice Medal
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
