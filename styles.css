@@ -17,6 +17,10 @@ body {
   flex-direction: column;
 }
 
+body.dark-theme {
+  background-color: #242424;
+}
+
 h1,
 h2 {
   color: #0b2545;
@@ -151,7 +155,7 @@ nav {
   background-color: transparent;
   border: none;
   text-align: center;
-  font-size: 25px;
+  font-size: 35px;
   color: #0b2545;
   display: none;
 }
