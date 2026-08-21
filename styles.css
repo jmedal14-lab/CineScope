@@ -135,7 +135,8 @@ nav {
 
 .dark-theme section,
 .dark-theme .footer__container,
-.dark-theme nav {
+.dark-theme nav,
+.dark-theme html {
   background-color: #242424 !important;
 }
 
