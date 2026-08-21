@@ -124,7 +124,8 @@ nav {
 
 .dark-theme .nav__logo--name,
 .dark-theme .header__description--sub-title,
-.dark-theme .nav__link--anchor {
+.dark-theme .nav__link--anchor,
+.dark-theme .btn__menu {
   color: white;
 }
 
@@ -132,6 +133,13 @@ nav {
 .dark-theme .footer__container,
 .dark-theme nav {
   background-color: #242424 !important;
+}
+
+.btns__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn__menu {
@@ -294,6 +302,12 @@ nav {
   margin-bottom: 50px;
 }
 
+.btn__media {
+  position: fixed;
+  bottom: 32px;
+  right: 40px;
+}
+
 /* FOOTER */
 
 .footer__container {
@@ -377,7 +391,7 @@ nav {
     display: block;
   }
   .header__description--sub-title {
-    padding: 0 16px;
+    padding: 0 32px;
   }
   .footer__row {
     justify-content: center;
@@ -398,7 +412,7 @@ nav {
     margin-top: 16px;
   }
   input::placeholder {
-    font-size: 12px;
+    font-size: 14px;
   }
   .undraw {
     animation: fade-up 600ms 900ms backwards;

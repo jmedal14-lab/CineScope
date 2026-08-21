@@ -44,43 +44,52 @@
           <li class="nav__link">
             <a
               href=""
-              class="nav__link--anchor link__hover-effect link__hover-effect-black" onclick="(toggleContrast(event))"
-              ><i
-                class="fa-solid fa-circle-half-stroke"
-              ></i>
+              class="nav__link--anchor link__hover-effect link__hover-effect-black"
+              onclick="toggleContrast(event)"
+              ><i class="fa-solid fa-circle-half-stroke"></i>
             </a>
           </li>
         </ul>
-        <button class="btn__menu" onclick="openMenu()">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-        <div class="menu__backdrop">
-          <button class="btn__menu btn__menu--close" onclick="closeMenu()">
-            <i class="fa-solid fa-times"></i>
+        <div class="btns__wrapper">
+          <button class="btn__menu" onclick="openMenu()">
+            <i class="fa-solid fa-bars"></i>
           </button>
-          <ul class="menu__links">
-            <li class="menu__list">
-              <a href="#" class="menu__link link__hover-effect" onclick="closeMenu()">Home</a>
-            </li>
-            <li class="menu__list">
-              <a href="#" class="menu__link link__hover-effect" onclick="closeMenu()">Catalog</a>
-            </li>
-            <li class="menu__list">
-              <a
-              href=""
-              class="menu__link link__hover-effect" onclick="(toggleContrast(event))"
-              ><i
-                class="fa-solid fa-circle-half-stroke"
-              ></i>
-            </a>
-            </li>
-            <li class="menu__list">
-              <a href="#" class="menu__link link__hover-effect" onclick="closeMenu()">Contact</a>
-            </li>
-          </ul>
+          <div class="menu__backdrop">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+              <i class="fa-solid fa-times"></i>
+            </button>
+            <ul class="menu__links">
+              <li class="menu__list">
+                <a
+                  href="#"
+                  class="menu__link link__hover-effect"
+                  onclick="closeMenu()"
+                  >Home</a
+                >
+              </li>
+              <li class="menu__list">
+                <a
+                  href="#"
+                  class="menu__link link__hover-effect"
+                  onclick="closeMenu()"
+                  >Catalog</a
+                >
+              </li>
+              <li class="menu__list">
+                <a
+                  href="#"
+                  class="menu__link link__hover-effect"
+                  onclick="closeMenu()"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <button class="btn__menu" onclick="toggleContrast(event)">
+              <i class="fa-solid fa-circle-half-stroke btn__menu"></i>
+            </button>
         </div>
       </nav>
-
 
       <header>
         <div class="header__container">
@@ -119,16 +128,30 @@
             <i class="fa-solid fa-video footer__logo"></i>
           </figure>
           <div class="footer__links">
-            <a href="#" class="footer__link link__hover-effect link__hover-effect--white">About Us</a>
-            <a href="#" class="footer__link link__hover-effect link__hover-effect--white">FAQ</a>
-            <a href="#" class="footer__link link__hover-effect link__hover-effect--white">Contact Support</a>
-            <a href="#" class="footer__link link__hover-effect link__hover-effect--white">Terms of Use</a>
-            </div>
-        </div>
-            <div class="footer__copyright">
-              Copyright &copy 2026 Jeanice Medal
-            </div>
+            <a
+              href="#"
+              class="footer__link link__hover-effect link__hover-effect--white"
+              >About Us</a
+            >
+            <a
+              href="#"
+              class="footer__link link__hover-effect link__hover-effect--white"
+              >FAQ</a
+            >
+            <a
+              href="#"
+              class="footer__link link__hover-effect link__hover-effect--white"
+              >Contact Support</a
+            >
+            <a
+              href="#"
+              class="footer__link link__hover-effect link__hover-effect--white"
+              >Terms of Use</a
+            >
           </div>
+        </div>
+        <div class="footer__copyright">Copyright &copy 2026 Jeanice Medal</div>
+      </div>
     </footer>
   </body>
 </html>
