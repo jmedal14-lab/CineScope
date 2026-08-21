@@ -376,6 +376,9 @@ nav {
   .btn__menu {
     display: block;
   }
+  .header__description--sub-title {
+    padding: 0 16px;
+  }
   .footer__row {
     justify-content: center;
   }
