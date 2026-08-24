@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CineScope</title>
+    <title>Catalog</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="main.js" defer></script>
-    <script src="index.js" defer></script>
+    <script src="catalog.js" defer></script>
     <script
       src="https://kit.fontawesome.com/2015aca0a7.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <section id="landing">
+    <section>
       <nav>
         <figure class="nav__logo">
           <i class="fa-solid fa-video"></i>
@@ -23,14 +23,14 @@
         <ul class="nav__links">
           <li class="nav__link">
             <a
-              href="#"
+              href="index.html"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >Home</a
             >
           </li>
           <li class="nav__link">
             <a
-              href="catalog.html"
+              href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >Catalog</a
             >
@@ -91,36 +91,47 @@
             </button>
         </div>
       </nav>
+    </section>
 
-      <header>
-        <div class="header__container">
-          <div class="header__description">
-            <h1 class="header__description--title">
-              The world's largest film library platform
-            </h1>
-
-            <h2 class="header__description--sub-title">
-              Find your next watch with <span class="orange">CineScope</span>
-            </h2>
-
-            <div class="search__bar">
-              <input id="search-input"
-                type="text"
-                placeholder="Search by Title or Keyword"
-                style="padding: 10px; font-size: 16px; line-height: 1.5"
-                class="header__search"
-              />
-              <button class="btn">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
+    <main>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="movies__header">
+              <h2 class="section__title">
+                Browse our films
+              </h2>
+              <div class="search__input--wrapper">
+                <input id="search-input"
+                type="text" 
+                placeholder="Search by Title or Keyword" 
+                style="padding: 10px; font-size: 14px; line-height: 1.5" class="catalog__header--search">
+                <button class="search__btn" type="submit" onclick="getMovies()">
+                <i class="fa-solid fa-magnifying-glass" style="color: #f28c28"></i>
+                </button>
+              </div>
             </div>
           </div>
-          <figure class="header__img--wrapper">
-            <img src="undraw_home-cinema_jdm1.svg" alt="" class="undraw" />
-          </figure>
         </div>
-      </header>
-    </section>
+      </section>
+
+      <section id="search">
+        <div class="container">
+          <div class="row row__search">
+            <div class="content__wrapper">
+              <h1 class="search__info">Search results:</h1>
+              <select id="filter">
+                <option value="" disabled selected>Sort</option>
+                <option value="A-Z">A-Z</option>
+                <option value="MOST_RECENT">Most Recent</option>
+                <option value="RATING">Rating, High to Low</option>
+              </select>
+              </div>
+              <div class="movies"></div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer>
       <div class="footer__container">
@@ -129,29 +140,17 @@
             <i class="fa-solid fa-video footer__logo"></i>
           </figure>
           <div class="footer__links">
-            <a
-              href="#"
-              class="footer__link link__hover-effect link__hover-effect--white no-cursor"
-              >About Us</a
-            >
-            <a
-              href="#"
-              class="footer__link link__hover-effect link__hover-effect--white no-cursor"
-              >FAQ</a
-            >
-            <a
-              href="#"
-              class="footer__link link__hover-effect link__hover-effect--white no-cursor"
-              >Contact Support</a
-            >
-            <a
-              href="#"
-              class="footer__link link__hover-effect link__hover-effect--white no-cursor"
-              >Terms of Use</a
-            >
+            <a href="#" class="footer__link link__hover-effect link__hover-effect--white no-cursor">About Us</a>
+            <a href="#" class="footer__link link__hover-effect link__hover-effect--white no-cursor">FAQ</a>
+            <a href="#" class="footer__link link__hover-effect link__hover-effect--white no-cursor">Contact Support</a>
+            <a href="#" class="footer__link link__hover-effect link__hover-effect--white no-cursor">Terms of Use</a>
+            </div>
+        </div>
+            <div class="footer__copyright">
+              Copyright &copy 2026 Jeanice Medal
+            </div>
           </div>
         </div>
-        <div class="footer__copyright">Copyright &copy 2026 Jeanice Medal</div>
       </div>
     </footer>
   </body>

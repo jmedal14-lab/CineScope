@@ -1,12 +1,20 @@
-function toggleContrast(event) {
-  event.preventDefault()
-  document.body.classList.toggle("dark-theme")
-}
+const searchInput = document.querySelector("#search-input")
 
-function openMenu() {
-  document.body.classList += " menu--open"
-}
+searchInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    const searchTerm = searchInput.value.trim()
+    if (!searchTerm) return;
 
-function closeMenu () {
-  document.body.classList.remove('menu--open')
-}
+    localStorage.setItem("movieSearch", searchTerm)
+    window.location.href = "catalog.html"
+  }
+});
+
+const searchButton = document.querySelector(".search__bar .btn")
+searchButton.addEventListener("click", () => {
+  const searchTerm = searchInput.value.trim()
+    if (!searchTerm) return;
+
+    localStorage.setItem("movieSearch", searchTerm)
+    window.location.href = "catalog.html"
+});
