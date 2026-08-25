@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 html {
@@ -34,7 +34,7 @@ li {
   list-style-type: none;
 }
 
-a, 
+a,
 button {
   cursor: pointer;
 }
@@ -44,7 +44,7 @@ a {
 }
 
 .orange {
-  color: #f28c28
+  color: #f28c28;
 }
 
 .no-cursor {
@@ -67,13 +67,11 @@ section {
   padding: 0 12px;
 }
 
-
 /* LANDING  */
 
 #landing {
   flex: 1;
 }
-
 
 nav {
   display: flex;
@@ -112,7 +110,7 @@ nav {
 .nav__logo--name {
   margin-left: 12px;
   font-size: 36px;
-  font-weight:500;
+  font-weight: 500;
   color: #0b2545;
 }
 
@@ -139,7 +137,6 @@ nav {
   transition: all 300ms ease;
 }
 
-
 .link__hover-effect:hover::after {
   left: 0;
   width: 100%;
@@ -164,7 +161,7 @@ nav {
 }
 
 .dark-theme .section__title {
-  color: #f28c28
+  color: #f28c28;
 }
 
 .dark-theme section,
@@ -233,7 +230,7 @@ nav {
 
 .menu__link {
   font-size: 40px;
-  color: #f28c28
+  color: #f28c28;
 }
 
 .btn__menu--close {
@@ -243,10 +240,7 @@ nav {
   top: 25px;
 }
 
-
-
 /* LANDING  */
-
 
 .header__container {
   padding: 10px 20px 0 20px;
@@ -323,7 +317,7 @@ nav {
 }
 
 .btn:hover {
-  background-color: #0b2545;  
+  background-color: #0b2545;
 }
 
 .fa-magnifying-glass {
@@ -399,9 +393,9 @@ nav {
 
 @media (max-width: 768px) {
   nav {
-  margin: 0;
-  padding: 0;
-  justify-content: space-between
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
   }
   .nav__logo {
     margin: 16px;
@@ -432,7 +426,7 @@ nav {
   .nav__links {
     display: none;
   }
-  .btns__wrapper{
+  .btns__wrapper {
     display: flex;
   }
   .btn__menu {
@@ -468,7 +462,7 @@ nav {
 }
 
 /* Catalog page  */
-.container, 
+.container,
 .catalog {
   padding: 8px;
 }
@@ -488,9 +482,9 @@ nav {
 }
 
 .search__input--wrapper {
- position: relative;
- width: 400px;
- margin-bottom: 32px;
+  position: relative;
+  width: 400px;
+  margin-bottom: 32px;
 }
 
 .catalog__header--search {
@@ -657,7 +651,6 @@ nav {
   #filter {
     width: 190px;
     flex-shrink: 0;
-
   }
   .movies {
     display: grid;
@@ -715,7 +708,7 @@ nav {
   }
   .movie__bottom {
     flex: 1;
-    padding: 8px; 
+    padding: 8px;
   }
   .movie__title {
     min-height: 20px;
