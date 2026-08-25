@@ -156,7 +156,10 @@ nav {
 .dark-theme .header__description--sub-title,
 .dark-theme .nav__link--anchor,
 .dark-theme .btn__menu,
-.dark-theme .search__info {
+.dark-theme .search__info,
+.dark-theme #search__results,
+.dark-theme .no__results--header,
+.dark-theme .no__results--para {
   color: #f7f3ea;
 }
 
@@ -565,7 +568,7 @@ nav {
 
 .movie__title {
   width: 100%;
-  min-height: 36px;
+  min-height: 32px;
   font-size: 14px;
   font-weight: 600;
   line-height: 1.3;
