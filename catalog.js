@@ -1,7 +1,7 @@
 const searchInput = document.querySelector("#search-input");
 const searchButton = document.querySelector(".search__btn");
 const filter = document.querySelector("#filter");
-console.log("searchInput", searchInput);
+const searchHeading = document.querySelector('#search__results')
 
 const key = "e7458bb4";
 let movieData = [];
@@ -51,6 +51,8 @@ async function getMovies(searchTerm) {
   catch (error) {
     console.error("Error fetching movies:", error);
 
+    const moviesElem = document.querySelector(".movies")
+
     moviesElem.innerHTML = `
         <div class="no__results">
           <i class="fa-solid fa-film"></i>
@@ -69,14 +71,14 @@ function displayMovies() {
         `<div class="movie">
         <div class="movie__top">
           <figure class="movie__img--wrapper">
-            <img src="${movie.Poster}" alt="" class="movie__poster">
+            <img src="${movie.Poster}" alt="Movie poster for ${movie.Title}" class="movie__poster">
           </figure>
         </div>
         <div class="movie__bottom">
           <div class="movie__title">${movie.Title}</div>
           <div class="movie__release">${movie.Year}</div>
           <div class="movie__rating">
-          <i class="fa-solid fa-star";"></i>
+          <i class="fa-solid fa-star"></i>
           ${movie.imdbRating}
           </div>
         </div>
@@ -92,6 +94,7 @@ searchInput.addEventListener("keydown", (event) => {
     if (!searchTerm) return;
 
     localStorage.setItem("movieSearch", searchTerm);
+    searchHeading.textContent = `Search results for: "${searchTerm}"`
     getMovies(searchTerm);
   }
 });
@@ -102,17 +105,15 @@ searchButton.addEventListener("click", () => {
   if (!searchTerm) return;
 
   localStorage.setItem("movieSearch", searchTerm);
+  searchHeading.textContent = `Search results for: "${searchTerm}"`
   getMovies(searchTerm);
 });
 
 filter.addEventListener("change", () => {
   if (filter.value === "A-Z") {
     movieData.sort((a, b) => a.Title.localeCompare(b.Title));
-    displayMovies();
-  }
-  if (filter.value === "MOST_RECENT") {
+  } else if (filter.value === "MOST_RECENT") {
     movieData.sort((a, b) => b.Year - a.Year);
-    displayMovies();
   } else if (filter.value === "RATING") {
     movieData.sort((a, b) => Number(b.imdbRating) - Number(a.imdbRating));
   }
@@ -122,5 +123,6 @@ filter.addEventListener("change", () => {
 const savedSearch = localStorage.getItem("movieSearch");
 if (savedSearch) {
   searchInput.value = savedSearch;
+  searchHeading.textContent = `Search results for: "${savedSearch}"`
   getMovies(savedSearch);
 }
