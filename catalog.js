@@ -44,7 +44,8 @@ async function getMovies(searchTerm) {
 
       const details = await response.json();
       console.log(movie.Title, details);
-      movie.imdbRating = details.imdbRating;
+      movie.imdbRating = 
+        details.imdbRating !== "N/A" ? details.imdbRating : null;
     }
     displayMovies();
   } 
@@ -71,15 +72,26 @@ function displayMovies() {
         `<div class="movie">
         <div class="movie__top">
           <figure class="movie__img--wrapper">
-            <img src="${movie.Poster}" alt="Movie poster for ${movie.Title}" class="movie__poster">
+            <img src="${movie.Poster}" 
+            alt="Movie poster for ${movie.Title}" class="movie__poster"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+          
+            <div class="movie__poster--placeholder">
+              <i class="fa-solid fa-film"></i>
+              <span>No Poster Available</span>
+            </div>
           </figure>
         </div>
         <div class="movie__bottom">
           <div class="movie__title">${movie.Title}</div>
           <div class="movie__release">${movie.Year}</div>
           <div class="movie__rating">
-          <i class="fa-solid fa-star"></i>
-          ${movie.imdbRating}
+            ${
+              movie.imdbRating
+                ? `<i class="fa-solid fa-star"></i> ${movie.imdbRating}`
+                : `<span>No rating available</span>`
+            }
           </div>
         </div>
       </div>`,

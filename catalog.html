@@ -32,6 +32,7 @@
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              aria-current="page"
               >Catalog</a
             >
           </li>
@@ -52,11 +53,11 @@
           </li>
         </ul>
         <div class="btns__wrapper">
-          <button class="btn__menu" onclick="openMenu()">
+          <button class="btn__menu" aria-label="Open menu" onclick="openMenu()">
             <i class="fa-solid fa-bars"></i>
           </button>
           <div class="menu__backdrop">
-            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()" aria-label="Close menu">
               <i class="fa-solid fa-times"></i>
             </button>
             <ul class="menu__links">
@@ -73,6 +74,7 @@
                   href="catalog.html"
                   class="menu__link link__hover-effect"
                   onclick="closeMenu()"
+                  aria-current="page"
                   >Catalog</a
                 >
               </li>
@@ -86,7 +88,7 @@
               </li>
             </ul>
           </div>
-          <button class="btn__menu" onclick="toggleContrast(event)">
+          <button class="btn__menu" onclick="toggleContrast(event)" aria-label="Dark Mode">
               <i class="fa-solid fa-circle-half-stroke btn__menu"></i>
             </button>
         </div>
@@ -106,7 +108,7 @@
                 type="text" 
                 placeholder="Search by Title or Keyword" 
                 style="padding: 10px; font-size: 14px; line-height: 1.5" class="catalog__header--search">
-                <button class="search__btn" type="button">
+                <button class="search__btn" aria-label="Search" type="button">
                 <i class="fa-solid fa-magnifying-glass" style="color: #f28c28"></i>
                 </button>
               </div>
@@ -147,7 +149,7 @@
             </div>
         </div>
             <div class="footer__copyright">
-              Copyright &copy 2026 Jeanice Medal
+              Copyright &copy; 2026 Jeanice Medal
             </div>
           </div>
         </div>
