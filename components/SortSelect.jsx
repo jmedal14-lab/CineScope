@@ -26,9 +26,6 @@ export default function SortSelect({ state, catalog }) {
           <option value="rating">Rating</option>
         </select>
       </div>
-      <small id="sort-scope" className="muted">
-        Sorts this page · updates on selection
-      </small>
     </form>
   );
 }
