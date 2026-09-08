@@ -1,0 +1,102 @@
+/* CineScope migration tokens. Import once from the Next.js root stylesheet.
+   Brand colors originate in the existing site; semantic roles are refinements. */
+:root {
+  color-scheme: light;
+  --color-canvas: #f7f3ea;
+  --color-surface: #fffcf6;
+  --color-surface-subtle: #eee7d9;
+  --color-text: #0b2545;
+  --color-text-muted: #526176;
+  --color-brand: #f28c28;
+  --color-on-brand: #0b2545;
+  --color-accent-text: #a44908;
+  --color-border: #cfd2d5;
+  --color-control-border: #657386;
+  --color-focus: #0b2545;
+  --color-rating: #fabf2a;
+  --color-error: #b42318;
+  --color-hero: #0b2545;
+  --color-on-hero: #f7f3ea;
+  --color-footer: #0b2545;
+  --color-on-footer: #f7f3ea;
+  --color-scrim: rgb(11 37 69 / 80%);
+
+  /* Map next/font's generated Inter variable to --font-inter. */
+  --font-body: var(--font-inter, Inter), system-ui, sans-serif;
+  --text-small: 0.875rem;
+  --text-body: 1rem;
+  --text-lead: 1.125rem;
+  --text-section: 1.5rem;
+  --text-page: clamp(1.75rem, 1.25rem + 2vw, 2.5rem);
+  --text-hero: clamp(2rem, 1.5rem + 2.5vw, 3.125rem);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --content-max: 1200px;
+  --results-search-width: 600px;
+  --text-results: clamp(1.875rem, 1.5rem + 1vw, 2.25rem);
+  --page-gutter: 16px;
+  --grid-gap: 16px;
+  --control-height: 48px;
+  --radius-card: 12px;
+  --radius-control: 12px;
+  --radius-modal: 16px;
+  --radius-pill: 999px;
+  --shadow-card: 0 8px 24px rgb(11 37 69 / 12%);
+  --shadow-card-hover: 0 12px 30px rgb(11 37 69 / 20%);
+  --duration-fast: 150ms;
+  --duration-normal: 200ms;
+  /* Original home-page entrance sequence. */
+  --home-enter-duration: 650ms;
+  --home-art-duration: 1200ms;
+  --home-title-delay: 400ms;
+  --home-subtitle-delay: 600ms;
+  --home-search-delay: 800ms;
+  --home-art-width: 440px;
+  --home-art-mobile-width: 260px;
+  --home-enter-distance: 40px;
+  --ease-ui: ease-out;
+  --card-hover-scale: 1.03;
+  --z-header: 20;
+  --z-menu: 40;
+  --z-modal: 100;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --color-canvas: #242424;
+  --color-surface: #303030;
+  --color-surface-subtle: #393939;
+  --color-text: #f7f3ea;
+  --color-text-muted: #cac4ba;
+  --color-accent-text: #ffad5c;
+  --color-border: #626262;
+  --color-control-border: #aaa397;
+  --color-focus: #ffad5c;
+  --color-error: #ffb4ab;
+  --shadow-card: 0 8px 24px rgb(0 0 0 / 24%);
+  --shadow-card-hover: 0 12px 30px rgb(0 0 0 / 36%);
+}
+
+@media (min-width: 768px) {
+  :root { --page-gutter: 24px; --grid-gap: 24px; }
+}
+
+@media (min-width: 1024px) {
+  :root { --page-gutter: 32px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-normal: 0ms;
+    --card-hover-scale: 1;
+  }
+}
