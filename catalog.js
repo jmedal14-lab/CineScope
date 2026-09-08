@@ -18,7 +18,7 @@ async function getMovies(searchTerm) {
 
   try {
     const movies = await fetch(
-      `https://www.omdbapi.com/?s=${encodeURIComponent(searchTerm)}&apikey=${key}`,
+      `https://www.omdbapi.com/?s=${encodeURIComponent(searchTerm)}&apikey=`,
     );
 
     const data = await movies.json();
@@ -39,7 +39,7 @@ async function getMovies(searchTerm) {
       const movie = movieData[i];
 
       const response = await fetch(
-        `https://www.omdbapi.com/?i=${movie.imdbID}&apikey=${key}`,
+        `https://www.omdbapi.com/?i=${movie.imdbID}&apikey=`,
       );
 
       const details = await response.json();
