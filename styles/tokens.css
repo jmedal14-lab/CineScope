@@ -41,6 +41,7 @@
   --space-24: 96px;
   --content-max: 1200px;
   --results-search-width: 600px;
+  --sort-mobile-width: 155px;
   --text-results: clamp(1.875rem, 1.5rem + 1vw, 2.25rem);
   --page-gutter: 16px;
   --grid-gap: 16px;

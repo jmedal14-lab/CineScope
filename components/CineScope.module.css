@@ -228,7 +228,11 @@
     justify-content: flex-start;
   }
   .resultsSort select {
-    flex: 1;
+    flex: 0 0 auto;
+    width: var(--sort-mobile-width);
+    min-height: 44px;
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--text-small);
   }
 }
 .sort {
@@ -416,7 +420,7 @@
     box-shadow: var(--shadow-card-hover);
   }
 }
-@media (min-width: 360px) {
+@media (min-width: 481px) {
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -462,6 +466,9 @@
   .menu {
     display: inline-flex;
     padding: var(--space-3);
+    background: transparent;
+    color: var(--color-text);
+    flex-shrink: 0;
   }
   .nav {
     display: none;

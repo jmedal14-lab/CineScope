@@ -1,0 +1,15 @@
+ .env.example           |   3 [31m-[m
+ .gitignore             |   8 [32m+[m[31m--[m
+ AGENTS.md              | 162 [31m------------------------------------------------[m
+ DESIGN_SYSTEM.md       | 163 [31m-------------------------------------------------[m
+ app/about/page.js      |  41 [31m-------------[m
+ app/catalog/page.js    |   5 [31m--[m
+ app/error.js           |  10 [31m---[m
+ app/globals.css        | 115 [31m----------------------------------[m
+ app/layout.js          |  66 [31m--------------------[m
+ app/loading.js         |  13 [31m----[m
+ app/movie/[id]/page.js | 120 [31m------------------------------------[m
+ app/not-found.js       |  12 [31m----[m
+ app/page.js            |  46 [31m--------------[m
+ app/search/page.js     |   5 [31m--[m
+ 14 files changed, 1 insertion(+), 768 deletions(-)
